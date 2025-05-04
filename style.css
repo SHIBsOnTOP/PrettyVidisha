@@ -1,51 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
-
-
-
 body {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-size: 1000px;
+  background-size: cover; /* Adjust for responsiveness */
   background-image: url("https://iili.io/3wnFo57.jpg");
   background-position: center center;
+  margin: 0; /* To remove default body margin */
 }
 
 .paper {
   background-image: url("https://iili.io/3jyejXR.jpg");
   background-size: 500px;
   background-position: center center;
-  padding: 20px 100px;
-/*  min-width: 800px; */
-  
+  padding: 20px 40px; /* Adjust padding for smaller screens */
   transform: rotateZ(-5deg);
   box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  
   position: absolute;
+  max-width: 90vw; /* Max width to ensure it doesn't overflow on smaller screens */
+  max-height: 80vh; /* Max height for responsiveness */
 }
 
 .paper.heart {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 300px; /* Smaller size for mobile */
+  height: 300px; /* Smaller size for mobile */
   padding: 0;
   border-radius: 50%;
 }
 
 .paper.image {
-  padding: 50px;
+  padding: 20px;
 }
+
 .paper.image p {
-  font-size: 50px;
+  font-size: 4vw; /* Use viewport width for responsiveness */
 }
 
 img {
-  max-height: 400px;
+  max-height: 300px; /* Adjust max-height to prevent overflow on smaller screens */
   width: 100%;
   user-select: none;
+  object-fit: contain; /* Ensures images maintain their aspect ratio */
 }
 
 .paper.heart::after {
@@ -56,7 +54,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: 250px;
+  background-size: 150px; /* Adjust for smaller screens */
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.9;
@@ -64,10 +62,10 @@ img {
 
 p {
   font-family: 'Zeyada';
-  font-size: 70px;
+  font-size: 5vw; /* Adjust font-size to scale with viewport */
   color: rgb(229, 21, 21);
   opacity: 0.95;
   user-select: none;
-  
- filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
+  filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
+  margin: 0; /* Remove default margin */
 }
